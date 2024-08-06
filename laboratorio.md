@@ -33,3 +33,21 @@ latest: Pulling from library/ubuntu
 Digest: sha256:2e863c44b718727c860746568e1d54afd13b2fa71b160f5cd9058fc436217b30
 Status: Downloaded newer image for ubuntu:latest
 root@5d1797b69ce9:/# 
+
+@Valen17lopez ➜ /workspaces/labs-docker-dev (main) $ docker ps -a
+CONTAINER ID   IMAGE     COMMAND                  CREATED          STATUS                       PORTS                                   NAMES
+e50198bffbc4   httpd     "httpd-foreground"       6 minutes ago    Up 6 minutes                 0.0.0.0:8000->80/tcp, :::8000->80/tcp   priceless_brahmagupta
+e0edb38776d2   nginx     "/docker-entrypoint.…"   7 minutes ago    Created                                                              wonderful_clarke
+5d1797b69ce9   ubuntu    "bash"                   11 minutes ago   Exited (130) 8 minutes ago                                           hardcore_montalcini
+ede7d864b684   nginx     "/docker-entrypoint.…"   12 minutes ago   Created                                                              relaxed_dhawan
+b5e5c7b3c07d   nginx     "/docker-entrypoint.…"   12 minutes ago   Up 12 minutes                0.0.0.0:8080->80/tcp, :::8080->80/tcp   unruffled_murdock
+@Valen17lopez ➜ /workspaces/labs-docker-dev (main) $ docker rm 5d1797b69ce9
+5d1797b69ce9
+@Valen17lopez ➜ /workspaces/labs-docker-dev (main) $ docker container prune
+WARNING! This will remove all stopped containers.
+Are you sure you want to continue? [y/N] y
+Deleted Containers:
+e0edb38776d21533f89e9f444686f65aec7228a1b0ffe0dd876fa4dff999eadd
+ede7d864b68446351da8d26fafc446f29bd949fc6e96a7aa8b1f09f5e4f3fb3c
+
+Total reclaimed space: 0B
