@@ -170,7 +170,7 @@ Total reclaimed space: 0B
 81c3528aa06d5ea67e0ec2ee93e99e3683470bc499a4eb0f53b64ddde6eeea57
 
 
-## Modificar el Dockerfile de Nginx para exponer el puerto 80
+## Ejercicio 5: Modificar el Dockerfile de Nginx para exponer el puerto 80
 @Valen17lopez ➜ /workspaces/labs-docker-dev (main) $ docker build -t my-nginx:latest .
 [+] Building 0.8s (6/6) FINISHED                   docker:default
  => [internal] load build definition from Dockerfile         0.1s
@@ -185,4 +185,40 @@ Total reclaimed space: 0B
  => => writing image sha256:b652852e3989e4efa74b3072fb5010e  0.0s
  => => naming to docker.io/library/my-nginx:latest   
 
- 
+
+## Ejercicio 1: Copiar un archivo HTML local a una imagen de Nginx
+
+@Valen17lopez ➜ /workspaces/labs-docker-dev (main) $ docker build -t ubuntu-updated:latest .
+[+] Building 7.7s (8/8) FINISHED                   docker:default
+ => [internal] load build definition from Dockerfile         0.1s
+ => => transferring dockerfile: 94B                          0.0s
+ => [internal] load metadata for docker.io/library/nginx:la  0.6s
+ => [auth] library/nginx:pull token for registry-1.docker.i  0.0s
+ => [internal] load .dockerignore                            0.0s
+ => => transferring context: 2B                              0.0s
+ => [internal] load build context                            0.3s
+ => => transferring context: 31B                             0.0s
+ => [1/2] FROM docker.io/library/nginx:latest@sha256:6af79a  5.8s
+ => => resolve docker.io/library/nginx:latest@sha256:6af79a  0.2s
+ => => sha256:6af79ae5de407283dcea8b00d5c 10.27kB / 10.27kB  0.0s
+ => => sha256:baa881b012a49e3c2cd6ab9d80f9f 2.29kB / 2.29kB  0.0s
+ => => sha256:a72860cb95fd59e9c696c66441c64 7.30kB / 7.30kB  0.0s
+ => => sha256:efc2b5ad9eec05befa54239d53f 29.13MB / 29.13MB  0.5s
+ => => sha256:045037a63be803c1d446a5239439580a4 627B / 627B  0.2s
+ => => sha256:8fe9a55eb80f3167f7b3a9c39f9 41.83MB / 41.83MB  0.8s
+ => => sha256:7111b42b4bfa1b5273abcc4b138983f48 955B / 955B  0.3s
+ => => sha256:3dfc528a4df9e1be9b2817271a35cef87 394B / 394B  0.5s
+ => => extracting sha256:efc2b5ad9eec05befa54239d53feeae356  1.3s
+ => => sha256:0f11e17345c583a30e9cc89b80b14 1.40kB / 1.40kB  0.8s
+ => => sha256:9e891cdb453be97c53e1ddbe4b955 1.21kB / 1.21kB  0.9s
+ => => extracting sha256:8fe9a55eb80f3167f7b3a9c39f90b9eacf  0.9s
+ => => extracting sha256:045037a63be803c1d446a5239439580a49  0.0s
+ => => extracting sha256:7111b42b4bfa1b5273abcc4b138983f48f  0.0s
+ => => extracting sha256:3dfc528a4df9e1be9b2817271a35cef87f  0.0s
+ => => extracting sha256:9e891cdb453be97c53e1ddbe4b955ee710  0.0s
+ => => extracting sha256:0f11e17345c583a30e9cc89b80b1423b7b  0.0s
+ => [2/2] COPY index.html /usr/share/nginx/html/             0.2s
+ => exporting to image                                       0.7s
+ => => exporting layers                                      0.6s
+ => => writing image sha256:42471ef34f250b2b8dd5baa18976e28  0.0s
+ => => naming to docker.io/library/ubuntu-updated:latest     0.0s
