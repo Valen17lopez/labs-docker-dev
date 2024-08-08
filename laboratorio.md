@@ -150,3 +150,21 @@ Total reclaimed space: 0B
  => => naming to docker.io/library/ubuntu-updated:latest     0.0s
 
 
+## Ejercicio 4: Construir y ejecutar la imagen de Nginx
+
+@Valen17lopez ➜ /workspaces/labs-docker-dev (main) $ docker build -t my-nginx:latest .
+[+] Building 0.7s (7/7) FINISHED                   docker:default
+ => [internal] load build definition from Dockerfile         0.1s
+ => => transferring dockerfile: 138B                         0.0s
+ => [internal] load metadata for docker.io/library/ubuntu:l  0.2s
+ => [auth] library/ubuntu:pull token for registry-1.docker.  0.0s
+ => [internal] load .dockerignore                            0.0s
+ => => transferring context: 2B                              0.0s
+ => [1/2] FROM docker.io/library/ubuntu:latest@sha256:2e863  0.0s
+ => CACHED [2/2] RUN apt-get update && apt-get install -y n  0.0s
+ => exporting to image                                       0.1s
+ => => exporting layers                                      0.0s
+ => => writing image sha256:5a24e96ddf0cea277e5147401f57af4  0.0s
+ => => naming to docker.io/library/my-nginx:latest           0.0s
+@Valen17lopez ➜ /workspaces/labs-docker-dev (main) $ docker run -d -p 80:80 my-nginx:latest
+81c3528aa06d5ea67e0ec2ee93e99e3683470bc499a4eb0f53b64ddde6eeea57
