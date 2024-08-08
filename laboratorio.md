@@ -222,3 +222,26 @@ Total reclaimed space: 0B
  => => exporting layers                                      0.6s
  => => writing image sha256:42471ef34f250b2b8dd5baa18976e28  0.0s
  => => naming to docker.io/library/ubuntu-updated:latest     0.0s
+
+
+ ## Ejercicio 2: Usar WORKDIR y copiar un archivo
+ @Valen17lopez ➜ /workspaces/labs-docker-dev (main) $ docker build -t ubuntu-updated:latest .
+[+] Building 1.9s (9/9) FINISHED                   docker:default
+ => [internal] load build definition from Dockerfile         0.1s
+ => => transferring dockerfile: 87B                          0.0s
+ => [internal] load metadata for docker.io/library/ubuntu:l  0.2s
+ => [auth] library/ubuntu:pull token for registry-1.docker.  0.0s
+ => [internal] load .dockerignore                            0.1s
+ => => transferring context: 2B                              0.0s
+ => CACHED [1/3] FROM docker.io/library/ubuntu:latest@sha25  0.0s
+ => [internal] load build context                            0.1s
+ => => transferring context: 31B                             0.0s
+ => [2/3] WORKDIR /app                                       0.2s
+ => [3/3] COPY myfile.txt .                                  0.3s
+ => exporting to image                                       0.7s
+ => => exporting layers                                      0.6s
+ => => writing image sha256:c2eef8758e02b78c236e4c75fee0d27  0.0s
+ => => naming to docker.io/library/ubuntu-updated:latest     0.0s
+
+
+ 
