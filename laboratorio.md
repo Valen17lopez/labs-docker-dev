@@ -244,4 +244,42 @@ Total reclaimed space: 0B
  => => naming to docker.io/library/ubuntu-updated:latest     0.0s
 
 
- 
+ ## Ejercicio 3: Ejecutar un script Python al iniciar el contenedor
+
+ @Valen17lopez ➜ /workspaces/labs-docker-dev (main) $ docker build -t ubuntu-updated:latest .
+[+] Building 26.1s (9/9) FINISHED                  docker:default
+ => [internal] load build definition from Dockerfile         0.1s
+ => => transferring dockerfile: 111B                         0.0s
+ => [internal] load metadata for docker.io/library/python:3  0.6s
+ => [auth] library/python:pull token for registry-1.docker.  0.0s
+ => [internal] load .dockerignore                            0.0s
+ => => transferring context: 2B                              0.0s
+ => [1/3] FROM docker.io/library/python:3.9@sha256:65438c2  22.3s
+ => => resolve docker.io/library/python:3.9@sha256:65438c2e  0.1s
+ => => sha256:9972540d93856f9ca3eff2cf803ff 2.52kB / 2.52kB  0.0s
+ => => sha256:83a59ab1a4811d0d1b135849e5071 7.31kB / 7.31kB  0.0s
+ => => sha256:ca4e5d6727252f0dbc207fbf283 49.55MB / 49.55MB  0.8s
+ => => sha256:65438c2e26dbf9f5db4b5553e33 10.35kB / 10.35kB  0.0s
+ => => sha256:30b93c12a9c9326732b35d9e3eb 24.05MB / 24.05MB  0.5s
+ => => sha256:10d643a5fa823cd013a108b2076 64.14MB / 64.14MB  1.2s
+ => => extracting sha256:ca4e5d6727252f0dbc207fbf283cb95e27  2.4s
+ => => sha256:d6dc1019d7935fe82827434da 211.24MB / 211.24MB  4.1s
+ => => sha256:c7d45ab0573c09f3315112fe3e8d2 6.16MB / 6.16MB  1.3s
+ => => sha256:564d1c451ea70670b349d1250f5 15.82MB / 15.82MB  1.5s
+ => => sha256:ddfb50ba1977e47749619886799b60da9 233B / 233B  1.6s
+ => => sha256:91b87d81d4c8d2b201b71e0a5b07f 2.70MB / 2.70MB  1.7s
+ => => extracting sha256:30b93c12a9c9326732b35d9e3ebe57148a  0.6s
+ => => extracting sha256:10d643a5fa823cd013a108b2076f4d2edf  2.5s
+ => => extracting sha256:d6dc1019d7935fe82827434da11bf96cf1  6.8s
+ => => extracting sha256:c7d45ab0573c09f3315112fe3e8d273f4b  0.3s
+ => => extracting sha256:564d1c451ea70670b349d1250f5c057741  0.6s
+ => => extracting sha256:ddfb50ba1977e47749619886799b60da9f  0.0s
+ => => extracting sha256:91b87d81d4c8d2b201b71e0a5b07fe01ea  0.3s
+ => [internal] load build context                            0.1s
+ => => transferring context: 30B                             0.0s
+ => [2/3] WORKDIR /app                                       0.2s
+ => [3/3] COPY script.py .                                   0.2s
+ => exporting to image                                       2.2s
+ => => exporting layers                                      2.1s
+ => => writing image sha256:38ffac2c50d72c15d4adb145753a853  0.0s
+ => => naming to docker.io/library/ubuntu-updated:latest     0.0s
