@@ -51,3 +51,26 @@ e0edb38776d21533f89e9f444686f65aec7228a1b0ffe0dd876fa4dff999eadd
 ede7d864b68446351da8d26fafc446f29bd949fc6e96a7aa8b1f09f5e4f3fb3c
 
 Total reclaimed space: 0B
+
+
+## Ejercicio 1: Crear un Dockerfile simple con Ubuntu y actualizar paquetes ##
+@Valen17lopez ➜ /workspaces/labs-docker-dev (main) $ docker build -t ubuntu-updated:latest .
+[+] Building 13.0s (7/7) FINISHED                  docker:default
+ => [internal] load build definition from Dockerfile         0.2s
+ => => transferring dockerfile: 97B                          0.0s
+ => [internal] load metadata for docker.io/library/ubuntu:l  0.7s
+ => [auth] library/ubuntu:pull token for registry-1.docker.  0.0s
+ => [internal] load .dockerignore                            0.1s
+ => => transferring context: 2B                              0.0s
+ => [1/2] FROM docker.io/library/ubuntu:latest@sha256:2e863  2.1s
+ => => resolve docker.io/library/ubuntu:latest@sha256:2e863  0.1s
+ => => sha256:2e863c44b718727c860746568e1d5 1.13kB / 1.13kB  0.0s
+ => => sha256:c920ba4cfca05503764b785c16b76d43c 424B / 424B  0.0s
+ => => sha256:35a88802559dd2077e584394471dd 2.30kB / 2.30kB  0.0s
+ => => sha256:9c704ecd0c694c4cbdd85e589ac 29.71MB / 29.71MB  0.5s
+ => => extracting sha256:9c704ecd0c694c4cbdd85e589ac8d1fc3f  1.1s
+ => [2/2] RUN apt-get update && apt-get upgrade -y           8.1s
+ => exporting to image                                       1.3s
+ => => exporting layers                                      1.1s
+ => => writing image sha256:68e1714c4bd4df246904012815fe860  0.0s
+ => => naming to docker.io/library/ubuntu-updated:latest 
